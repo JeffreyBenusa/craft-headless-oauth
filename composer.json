@@ -12,14 +12,15 @@
   },
   "autoload": {
     "psr-4": {
-      "jeffbenusa\\craftheadlessoauth\\": "src/"
+      "jeffbenusa\\headlessoauth\\": "src/"
     }
   },
   "extra": {
+    "class": "jeffbenusa\\headlessoauth\\Plugin",
     "handle": "_headless-oauth",
-    "name": "headless-oauth",
-    "developer": "Jeff Benusa",
-    "documentationUrl": ""
+    "name": "Headless OAuth",
+    "description": "React Native and OAuth project for learning technologies",
+    "documentationUrl": "https://github.com/JeffreyBenusa/craft-headless-oauth/blob/main/README.md"
   },
   "scripts": {
     "check-cs": "ecs check --ansi",

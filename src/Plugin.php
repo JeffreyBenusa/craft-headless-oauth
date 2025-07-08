@@ -1,11 +1,11 @@
 <?php
 
-namespace jeffbenusa\craftheadlessoauth;
+namespace jeffbenusa\headlessoauth;
 
 use Craft;
 use craft\base\Model;
 use craft\base\Plugin as BasePlugin;
-use jeffbenusa\craftheadlessoauth\models\Settings;
+use jeffbenusa\headlessoauth\models\Settings;
 
 /**
  * headless-oauth plugin
@@ -36,7 +36,7 @@ class Plugin extends BasePlugin
         
         // Set the controllerNamespace based on whether this is a console or web request
         if (Craft::$app->request->isConsoleRequest) {
-            $this->controllerNamespace = '???\\console\\controllers';
+            $this->controllerNamespace = 'jeffbenusa\\headlessoauth\\console\\controllers';
         } else {
             $this->controllerNamespace = 'jeffbenusa\\headlessoauth\\controllers';
         }
@@ -61,9 +61,7 @@ class Plugin extends BasePlugin
     {
         return Craft::$app->view->renderTemplate('_headless-oauth/_settings.twig', [
             'plugin' => $this,
-            'settings' => $this->getSettings(),
-            'icon' => '@jeffbenusa\craftheadlessoauth\assets\img\HireJeffrey-Symbol-Teal.svg',
-            
+            'settings' => $this->getSettings()
         ]);
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace jeffbenusa\craftheadlessoauth\models;
+namespace jeffbenusa\headlessoauth\models;
 
 use Craft;
 use craft\base\Model;
